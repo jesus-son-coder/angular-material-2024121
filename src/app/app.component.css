@@ -1,5 +1,5 @@
 
->>> body {
+body {
     margin: 0;
 }
 
@@ -9,5 +9,10 @@ main {
 
 mat-toolbar a {
   color: white;
+}
+
+.mat-mdc-slider {
+  margin-top: 50px;
+  width: 250px;
 }
 
