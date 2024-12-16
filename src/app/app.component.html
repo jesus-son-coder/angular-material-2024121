@@ -26,6 +26,23 @@
     <button mat-icon-button (click)="sidenav.open()">
       <mat-icon>menu</mat-icon>
     </button>
+
+    <a mat-button [matMenuTriggerFor]="dropdownMenu">
+      Screens
+    </a>
+    <mat-menu #dropdownMenu>
+      <button mat-menu-item routerLink="/">Courses</button>
+      <button mat-menu-item routerLink="/about">About</button>
+    </mat-menu>
+
+    <a mat-button routerLink="/">
+      <mat-icon>person_add</mat-icon>
+      Register
+    </a>
+    <a mat-button routerLink="">
+      <mat-icon>account_circle</mat-icon>
+      Login
+    </a>
   </mat-toolbar>
 
   <router-outlet></router-outlet>
