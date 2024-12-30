@@ -1,5 +1,28 @@
 <div [formGroup]="form" class="course-details-form">
 
+  <!--<mat-form-field appearance="fill" floatLabel="always|never|auto">-->
+  <mat-form-field appearance="fill">
+    <mat-label>Course title</mat-label>
+    <input matInput placeholder="Course title" formControlName="title" #title>
+
+    <mat-hint align="end">
+      {{form.controls.title.value.length}} / 60
+      <!-- ou : -->
+      <!-- {{ title.value.length}} // Dans ce cas "title" provient de l'ID #title du champ input -->
+    </mat-hint>
+    <!--
+    <span matPrefix>+32</span>
+    <span matSuffix>.00</span>
+    -->
+
+    <!-- Gestion des erreurs: -->
+    <!-- Utilisant la propriété "title" du form.control :
+    <mat-error *ngIf="form.controls.title.errors?.minlength"> -->
+    <!-- Ou bien en utilisant le Getter courseTitle() -->
+    <mat-error *ngIf="courseTitle.errors?.minlength">
+      A minimum length of 5 characters is required.
+    </mat-error>
+  </mat-form-field>
 
 </div>
 
