@@ -43,6 +43,13 @@
     </mat-select>
   </mat-form-field>
 
+  <mat-form-field appearance="outline">
+    <input matInput formControlName="releasedAt"
+      [matDatepicker]="releaseAtPicker" placeholder="Release date" >
+    <mat-datepicker-toggle matIconSuffix [for]="releaseAtPicker"></mat-datepicker-toggle>
+    <mat-datepicker #releaseAtPicker></mat-datepicker>
+  </mat-form-field>
+
 </div>
 
 
